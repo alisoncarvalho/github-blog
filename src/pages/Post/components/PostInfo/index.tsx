@@ -19,7 +19,7 @@ export function PostInfo({postData , isLoading}: PostInfoProps){
         navigate(-1)
     }
 
-    const dateFormatted = relativeDateFormatter(postData.createdAt)
+    const dateFormatted = relativeDateFormatter(postData?.createdAt)
 
     return(
         <PostInfoContainer>

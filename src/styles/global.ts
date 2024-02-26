@@ -1,9 +1,46 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+export const GlobalStyles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+      width: 0.45rem;
     }
-`
+
+    ::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme["base-border"]}
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme["brand-blue"]};
+      border-radius: 999px;
+    }
+  }
+
+  body {
+    background: ${({ theme }) => theme["base-background"]};
+    color: ${({ theme }) => theme["base-text"]};
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, textarea, button {
+    font: 400 1rem 'Nunito', sans-serif;
+      line-height: 160%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+`;
